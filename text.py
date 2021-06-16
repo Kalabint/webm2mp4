@@ -11,7 +11,7 @@ generating_thumbnail = "🖼 Generating thumbnail.."
 uploading = "☁️ Uploading to Telegram..."
 
 class error:
-    contact_hint = "Contat @Mike_Went if you think it's a bot-side error."
+    contact_hint = "Contact @Mike_Went if you think it's a bot-side error."
 
     downloading = "⚠️ Unable to download this file. " + contact_hint
     converting = "⚠️ Sorry, <code>ffmpeg</code> seems unable to convert this file. " + contact_hint
