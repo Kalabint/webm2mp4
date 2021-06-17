@@ -18,12 +18,12 @@ def load_config_vars():
     temp_path = os.environ['TMP_PATH']
 
     if ffmpeg_threads != "":
-    print(f"FFMPEG Threads not set, defaulting to 2 Threads.")
-    ffmpeg_threads = 2
+     print(f"FFMPEG Threads not set, defaulting to 2 Threads.")
+     ffmpeg_threads = 2
 
     if temp_path != "":
-    print(f"Temp Path not set, defaulting to /tmp/.")
-    temp_path = /tmp/
+     print(f"Temp Path not set, defaulting to /tmp/.")
+     temp_path = /tmp/
 
 for variable in ["telegram_token", "ffmpeg_threads", "temp_path"]:
     config[variable] = eval(variable)
