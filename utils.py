@@ -13,6 +13,7 @@ def filesize(filename):
     return os.stat(filename).st_size
 
 def load_config_vars():
+    config = {"telegram_token": ""}
     telegram_token = os.environ['TELEGRAM_TOKEN']
     ffmpeg_threads = os.environ['FFMPEG_THREADS']
     temp_path = os.environ['TMP_PATH']
@@ -31,7 +32,7 @@ def load_config_vars():
 
 def load_config(filename):
     # Default config
-    config = {"telegram_token": "",
+    config2 = {"telegram_token": "",
               "ffmpeg_threads": 2,
               "temp_path": "/tmp/"}
     try:
