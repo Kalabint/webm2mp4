@@ -26,7 +26,7 @@ def load_config_vars():
      print(f"Temp Path not set, defaulting to /tmp/.")
      temp_path = "/tmp/"
 
-     print("Using the following Parameters: FFMPEG Threads: ", FFMPEG_THREADS, ", Temp Path: ", TMP_PATH, ", Telegram Bot Token: ", TELEGRAM_TOKEN, ".")
+     print('Using the following Parameters: FFMPEG Threads: ' + str(FFMPEG_THREADS) + ', Temp Path: ' + str(TMP_PATH) + ', Telegram Bot Token: ' + str(TELEGRAM_TOKEN) + '.')
      for variable in ["telegram_token", "ffmpeg_threads", "temp_path"]:
          config[variable] = eval(variable)
      return config
