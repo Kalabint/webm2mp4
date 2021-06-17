@@ -25,9 +25,9 @@ def load_config_vars():
      print(f"Temp Path not set, defaulting to /tmp/.")
      temp_path = "/tmp/"
 
-for variable in ["telegram_token", "ffmpeg_threads", "temp_path"]:
-    config[variable] = eval(variable)
-return config
+     for variable in ["telegram_token", "ffmpeg_threads", "temp_path"]:
+         config[variable] = eval(variable)
+     return config
 
 def load_config(filename):
     # Default config
