@@ -7,7 +7,8 @@ RUN apt-get update
 RUN apt-get install -y ffmpeg python3-pip git
 
 # Get Bot-Code from Github
-RUN git clone https://github.com/Kalabint/webm2mp4.git skipcache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone https://github.com/Kalabint/webm2mp4.git
 WORKDIR /Kala2X_Bot/webm2mp4
 
 # Set up Bot Requirements and copy Config file

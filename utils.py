@@ -23,7 +23,7 @@ def load_config_vars():
 
     if temp_path != "":
      print(f"Temp Path not set, defaulting to /tmp/.")
-     temp_path = /tmp/
+     temp_path = "/tmp/"
 
 for variable in ["telegram_token", "ffmpeg_threads", "temp_path"]:
     config[variable] = eval(variable)
