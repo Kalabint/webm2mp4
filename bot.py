@@ -16,7 +16,8 @@ import text
 from utils import bytes2human
 
 MAXIMUM_FILESIZE_ALLOWED = 50 * 1024 * 1024  # ~50 MB
-config = utils.load_config("config.json")
+# config = utils.load_config("config.json")
+config = utils.load_config_vars()
 if config.get("telegram_token") == "":
     print(f"Please specify Telegram bot token in config.json")
     exit(1)

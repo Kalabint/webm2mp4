@@ -12,6 +12,23 @@ def bytes2human(raw):
 def filesize(filename):
     return os.stat(filename).st_size
 
+def load_config_vars():
+    telegram_token = os.environ['TELEGRAM_TOKEN']
+    ffmpeg_threads = os.environ['FFMPEG_THREADS']
+    temp_path = os.environ['TMP_PATH']
+
+    if ffmpeg_threads != "":
+    print(f"FFMPEG Threads not set, defaulting to 2 Threads.")
+    ffmpeg_threads = 2
+
+    if temp_path != "":
+    print(f"Temp Path not set, defaulting to /tmp/.")
+    temp_path = /tmp/
+
+for variable in ["telegram_token", "ffmpeg_threads", "temp_path"]:
+    config[variable] = eval(variable)
+return config
+
 def load_config(filename):
     # Default config
     config = {"telegram_token": "",
