@@ -79,8 +79,8 @@ def convert_worker(target_format, message, url, config, bot):
                 "-c:v", "libx264",                       # specify video encoder
                 "-max_muxing_queue_size", "9999",        # https://trac.ffmpeg.org/ticket/6375
                 "-movflags", "+faststart",               # optimize for streaming
-                "-preset", "veryslow",                   # https://trac.ffmpeg.org/wiki/Encode/H.264#a2.Chooseapresetandtune
-                "-timelimit", "900",                     # prevent DoS (exit after 15 min)
+                "-preset", str(config["ffmpeg_preset"]),       # https://trac.ffmpeg.org/wiki/Encode/H.264#a2.Chooseapresetandtune
+                "-timelimit", str(config["ffmpeg_timelimit"]), # prevent DoS (exit after 15 min)
                 "-vf", "pad=ceil(iw/2)*2:ceil(ih/2)*2",  # https://stackoverflow.com/questions/20847674/ffmpeg-libx264-height-not-divisible-by-2#20848224
                 output_filename,
             ]
@@ -92,7 +92,7 @@ def convert_worker(target_format, message, url, config, bot):
                 "-threads", str(config["ffmpeg_threads"]),
                 "-thread_type", "slice",
                 "-i", input_filename,
-                "-timelimit", "60",       # prevent DoS (exit after 15 min)
+                "-timelimit", "60",       # prevent DoS (exit after 1 min)
                 output_filename,
             ]
         )

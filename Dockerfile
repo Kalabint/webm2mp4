@@ -13,7 +13,7 @@ WORKDIR /Kala2X_Bot/webm2mp4
 
 # Set up Bot Requirements and copy Config file
 RUN pip3 install --user -r requirements.txt
-COPY config.json ./
+# COPY config.json ./
 
 #Define ENV_Vars
 ENV FFMPEG_THREADS 2
