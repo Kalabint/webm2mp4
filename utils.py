@@ -25,9 +25,9 @@ def load_config_vars():
 
     print('Using the following Parameters: FFMPEG Threads: ' + str(ffmpeg_threads) + ', Temp Path: ' + str(temp_path) + ', Telegram Bot Token: ' + str(telegram_token) + '.')
 
-     for variable in ["telegram_token", "ffmpeg_threads", "temp_path", "ffmpeg_timelimit", "ffmpeg_preset"]:
-         config[variable] = eval(variable)
-     return config
+    for variable in ["telegram_token", "ffmpeg_threads", "temp_path", "ffmpeg_timelimit", "ffmpeg_preset"]:
+        config[variable] = eval(variable)
+    return config
 
 def load_config(filename):
     # Default config
