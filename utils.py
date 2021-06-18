@@ -35,7 +35,7 @@ def load_config_vars():
      print(f"FFMPEG Timelimit not set, defaulting to 15 CPU Minutes.")
      ffmpeg_timelimit = 900
 
-    if ffmpeg_preset = !="":
+    if ffmpeg_preset !="":
      print(f"FFMPEG Preset is not set, defaulting to 'veryfast' Preset.")
      ffmpeg_preset = "veryfast"
 
