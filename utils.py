@@ -14,7 +14,7 @@ def filesize(filename):
 
 def load_config_vars():
     # Config Dictionary init
-    config = {"telegram_token": ""}
+    config = load_config(config.json)
 
     # Loading ENV Vars from Docker
     telegram_token = os.getenv('TELEGRAM_TOKEN') or ''
@@ -22,22 +22,6 @@ def load_config_vars():
     temp_path = os.getenv('TMP_PATH') or ''
     ffmpeg_timelimit = os.getenv('FFMPEG_TIMELIMIT') or ''
     ffmpeg_preset = os.getenv('FFMPEG_PRESET') or ''
-
-    if ffmpeg_threads != "":
-     print(f"FFMPEG Threads not set, defaulting to 2 Threads.")
-     ffmpeg_threads = 2
-
-    if temp_path != "":
-     print(f"Temp Path not set, defaulting to /tmp/.")
-     temp_path = "/tmp/"
-
-    if ffmpeg_timelimit !="":
-     print(f"FFMPEG Timelimit not set, defaulting to 15 CPU Minutes.")
-     ffmpeg_timelimit = 900
-
-    if ffmpeg_preset !="":
-     print(f"FFMPEG Preset is not set, defaulting to 'veryfast' Preset.")
-     ffmpeg_preset = "veryfast"
 
      print('Using the following Parameters: FFMPEG Threads: ' + str(ffmpeg_threads) + ', Temp Path: ' + str(temp_path) + ', Telegram Bot Token: ' + str(telegram_token) + '.')
 
