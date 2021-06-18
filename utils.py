@@ -23,6 +23,8 @@ def load_config_vars():
     ffmpeg_timelimit = os.environ.get('FFMPEG_TIMELIMIT', '')
     ffmpeg_preset = os.environ.get('FFMPEG_PRESET', '')
 
+    str(telegram_token or '')
+
     if ffmpeg_threads != "":
      print(f"FFMPEG Threads not set, defaulting to 2 Threads.")
      ffmpeg_threads = 2
