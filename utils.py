@@ -17,11 +17,11 @@ def load_config_vars():
     config = {"telegram_token": ""}
 
     # Loading ENV Vars from Docker
-    telegram_token = os.environ['TELEGRAM_TOKEN']
-    ffmpeg_threads = os.environ['FFMPEG_THREADS']
-    temp_path = os.environ['TMP_PATH']
-    ffmpeg_timelimit = os.environ['FFMPEG_TIMELIMIT']
-    ffmpeg_preset = os.environ['FFMPEG_PRESET']
+    telegram_token = os.environ.get['TELEGRAM_TOKEN', '']
+    ffmpeg_threads = os.environ.get['FFMPEG_THREADS', '']
+    temp_path = os.environ.get['TMP_PATH', '']
+    ffmpeg_timelimit = os.environ.get['FFMPEG_TIMELIMIT', '']
+    ffmpeg_preset = os.environ.get['FFMPEG_PRESET', '']
 
     if ffmpeg_threads != "":
      print(f"FFMPEG Threads not set, defaulting to 2 Threads.")
