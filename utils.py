@@ -32,12 +32,12 @@ def load_config_vars():
      temp_path = "/tmp/"
 
     if ffmpeg_timelimit !="":
-    print(f"FFMPEG Timelimit not set, defaulting to 15 CPU Minutes.")
-    ffmpeg_timelimit = 900
+     print(f"FFMPEG Timelimit not set, defaulting to 15 CPU Minutes.")
+     ffmpeg_timelimit = 900
 
     if ffmpeg_preset = !="":
-    print(f"FFMPEG Preset is not set, defaulting to 'veryfast' Preset.")
-    ffmpeg_preset = "veryfast"
+     print(f"FFMPEG Preset is not set, defaulting to 'veryfast' Preset.")
+     ffmpeg_preset = "veryfast"
 
      print('Using the following Parameters: FFMPEG Threads: ' + str(ffmpeg_threads) + ', Temp Path: ' + str(temp_path) + ', Telegram Bot Token: ' + str(telegram_token) + '.')
 
