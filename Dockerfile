@@ -19,6 +19,8 @@ RUN pip3 install --user -r requirements.txt
 
 #Define ENV_Vars
 ENV FFMPEG_THREADS 2
+ENV FFMPEG_TIMELIMIT 900
+ENV FFMPEG_PRESET veryfast
 ENV TMP_PATH /tmp/
 ENV TELEGRAM_TOKEN CHANGE_ME!
 
