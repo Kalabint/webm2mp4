@@ -14,7 +14,7 @@ def filesize(filename):
 
 def load_config_vars():
     # Config Dictionary init
-    global config = {}
+    global config
     config = load_config(config.json)
 
     # Loading ENV Vars from Docker
