@@ -13,7 +13,12 @@ def filesize(filename):
     return os.stat(filename).st_size
 
 def load_config_vars():
-    config = ["test"]
+    config = {"telegram_token": "",
+              "ffmpeg_threads": 2,
+              "temp_path": "/tmp/",
+              "ffmpeg_timelimit": 900,
+              "ffmpeg_preset": "veryfast"}
+
     # Loading ENV Vars from Docker
     telegram_token = os.getenv('TELEGRAM_TOKEN') or ''
     ffmpeg_threads = os.getenv('FFMPEG_THREADS') or ''
