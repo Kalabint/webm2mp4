@@ -13,10 +13,6 @@ def filesize(filename):
     return os.stat(filename).st_size
 
 def load_config_vars():
-    # Config Dictionary init
-    global config
-    config = load_config(config.json)
-
     # Loading ENV Vars from Docker
     telegram_token = os.getenv('TELEGRAM_TOKEN') or ''
     ffmpeg_threads = os.getenv('FFMPEG_THREADS') or ''
