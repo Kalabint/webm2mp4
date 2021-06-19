@@ -21,6 +21,10 @@ config = utils.load_config_vars()
 if config.get("telegram_token") == "":
     print(f"Please specify Telegram bot token in config.json")
     exit(1)
+if  config.get("telegram_token") == "CHANGE_ME!":
+    print(f"Please change Telegram bot token in the Docker ENV!")
+    exit(1)
+
 
 def convert_worker(target_format, message, url, config, bot):
     """Generic process spawned every time user sends a link or a file"""
