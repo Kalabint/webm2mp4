@@ -18,9 +18,9 @@ RUN pip3 install --user -r requirements.txt
 # COPY config.json ./
 
 #Define ENV_Vars
-# ENV FFMPEG_THREADS 2
-# ENV TMP_PATH /tmp/
-# ENV TELEGRAM_TOKEN CHANGE_ME!
+ENV FFMPEG_THREADS 2
+ENV TMP_PATH /tmp/
+ENV TELEGRAM_TOKEN CHANGE_ME!
 
 # Starting Bot Startup Script
 COPY startup.sh ./
