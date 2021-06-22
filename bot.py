@@ -125,7 +125,7 @@ def convert_worker(target_format, message, url, config, bot):
         time.sleep(2)
 
     # Exit in case of error with ffmpeg
-    if ffmpeg_process.returncode == 24:
+    if ffmpeg_process.returncode == 255:
         update_status_message(text.error.timelimit)
         # Clean up and close pipe explicitly
         utils.rm(output_filename)
