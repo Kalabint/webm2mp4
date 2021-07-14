@@ -17,7 +17,7 @@ def load_config_vars():
               "ffmpeg_threads": 2,
               "temp_path": "/tmp/",
               "ffmpeg_timelimit": 900,
-              "ffmpeg_preset": "veryfast"}
+              "ffmpeg_preset": "slow"}
 
     # Loading ENV Vars from Docker
     telegram_token = os.getenv('TELEGRAM_TOKEN') or ''
@@ -34,11 +34,11 @@ def load_config_vars():
 
 def load_config(filename):
     # Default config
-    config_json = {"telegram_token": "",
-              "ffmpeg_threads": 2,
-              "temp_path": "/tmp/",
-              "ffmpeg_timelimit": 900,
-              "ffmpeg_preset": "veryfast"}
+#    config_json = {"telegram_token": "",
+#              "ffmpeg_threads": 2,
+#              "temp_path": "/tmp/",
+#              "ffmpeg_timelimit": 900,
+#              "ffmpeg_preset": "veryfast"}
     try:
         with open(filename, "r") as f:
             config.update(json.load(f))
