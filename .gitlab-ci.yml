@@ -32,7 +32,7 @@ build-job:
     - echo "Hello, $GITLAB_USER_LOGIN!"
 
 Prerun_Setup:
-  stage: test
+  stage: build
   script:
     - pip3 install -r requirements.txt
 
