@@ -43,7 +43,7 @@ Code_Runner:
     - echo "TELEGRAM_TOKEN=CHANGE_ME!"
     - echo "FFMPEG_THREADS=2"
     - echo "FFMPEG_PRESET=ultrafast"
-    - ./bot.py
+    - ./test.py
 
 
 
