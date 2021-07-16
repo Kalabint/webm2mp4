@@ -21,7 +21,7 @@ before_script:
   - apt-get update
   - apt-get install -y ffmpeg
   - python -V  # Print out python version for debugging
-  - pip install virtualenv
+  - pip3 install virtualenv
   - virtualenv venv
   - source venv/bin/activate
 
