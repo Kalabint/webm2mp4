@@ -2,7 +2,8 @@
 
 echo Starting Telegram Bot
 
-python3 bot.py
+chmod +x test.py
+python3 test.py
 echo telegram bot crashed
 # Dummy ping for diagnosing Container
 ping google.ch
