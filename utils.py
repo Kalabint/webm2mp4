@@ -66,3 +66,6 @@ def random_string(length=12):
         random.choice(string.ascii_uppercase + string.digits) for _ in range(length)
     )
 
+
+def ci_cd(text):
+    print(str(text))
