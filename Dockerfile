@@ -9,9 +9,9 @@ RUN apt-get install -y ffmpeg python3-pip git
 RUN apt-get install -y nano htop
 
 # Get Bot-Code from Github
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone https://github.com/Kalabint/webm2mp4.git
-WORKDIR /Kala2X_Bot/webm2mp4
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+# RUN git clone https://github.com/Kalabint/webm2mp4.git
+# WORKDIR /Kala2X_Bot/webm2mp4
 
 # Set up Bot Requirements and copy Config file
 RUN pip3 install --user -r requirements.txt
