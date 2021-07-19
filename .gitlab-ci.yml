@@ -24,6 +24,7 @@ before_script:
   - pip3 install virtualenv
   - virtualenv venv
   - source venv/bin/activate
+  - pip3 install -r requirements.txt
 
 
 build-job:
@@ -34,7 +35,8 @@ build-job:
 Prerun_Setup:
   stage: build
   script:
-    - pip3 install -r requirements.txt
+    - echo "PreRun"
+    #- pip3 install -r requirements.txt
 
 
 Code_Runner:
