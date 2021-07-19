@@ -7,4 +7,8 @@ if __name__ == "__bot__":
    # stuff only to run when not called via 'import' here
    bot()
 
-print ("Test OK!");
+
+text = "Test OK!"
+bot.utils.ci_cd(text): ();
+
+print ("Test Finnished!");
