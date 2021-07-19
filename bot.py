@@ -24,6 +24,9 @@ if config.get("telegram_token") == "":
 if  config.get("telegram_token") == "CHANGE_ME!":
     print(f"Please change Telegram bot token in the Docker ENV!")
     exit(1)
+if  config.get("telegram_token") == "CI_CD":
+    print(f"Telegram Token is CI_CD. Running Test Completed")
+    exit(0)
 
 
 def convert_worker(target_format, message, url, config, bot):
