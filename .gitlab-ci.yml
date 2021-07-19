@@ -49,7 +49,7 @@ Code_Runner:
 
 Docker_Image_Builder:
   stage: build
-  image: registry.seedelmann.ch/kalabint/dockerx:latest
+  image: registry.seedelmann.ch/seedelmann/dockerx:latest
   #entrypoint: ["CMD"]
   script:
     - mkdir -p /kaniko/.docker
