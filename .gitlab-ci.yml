@@ -43,10 +43,6 @@ Code_Runner:
   stage: test
   script:
     - source venv/bin/activate
- #   - pip3 install -r requirements.txt
-    - TELEGRAM_TOKEN=CI_CD
-    - echo "FFMPEG_THREADS=2"
-    - echo "FFMPEG_PRESET=ultrafast"
     - ./startup.sh
 
 
