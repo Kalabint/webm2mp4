@@ -9,7 +9,7 @@ text = "Test OK!"
 
 if __name__ == "__bot__":
    # stuff only to run when not called via 'import' here
-
+     bot.utils.load_config_vars()
      bot.utils.ci_cd(text);
      bot()
 
