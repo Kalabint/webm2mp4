@@ -9,6 +9,6 @@ if __name__ == "__bot__":
 
 
 text = "Test OK!"
-bot.utils.ci_cd(text): ();
+bot.utils.ci_cd(text);
 
 print ("Test Finnished!");

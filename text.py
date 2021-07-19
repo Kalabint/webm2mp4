@@ -19,3 +19,4 @@ class error:
     huge_file = "🍉 File is bigger than 50 MB. Telegram <b>does not<b> allow bots to upload huge files, sorry."
     animated_sticker = "🎬 Animated stickers are unsupported yet, submit a <a href='https://github.com/MikeWent/webm2mp4'>pull-request</a> if you implement it!"
     timelimit = "This Conversion took to much processing power, try something smaller!"
+    
