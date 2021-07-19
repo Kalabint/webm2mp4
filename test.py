@@ -6,9 +6,9 @@
 
 from bot.utils import ci_cd
 
-#if __name__ == "__bot__":
+if __name__ == "__bot__":
    # stuff only to run when not called via 'import' here
-#   bot()
+   bot()
 
 
 text = "Test OK!"
