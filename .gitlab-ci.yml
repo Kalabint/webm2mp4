@@ -1,8 +1,8 @@
 stages:
-    - prerun_setup
-    - test
-    - build
-    - deploy
+  - prerun_setup
+  - test
+  - build
+  - deploy
 
 
 # Official language image. Look for the different tagged releases at:
@@ -47,9 +47,9 @@ Code_Runner:
     - source venv/bin/activate
     - ./bot.py
 
-build-job:
+Docker_Image_Builder:
   stage: build
-  image:
+  image: registry.seedelmann.ch/kalabint/dockerx:latest
     name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
   script:
