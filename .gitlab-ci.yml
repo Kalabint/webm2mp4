@@ -50,6 +50,7 @@ Code_Runner:
 Docker_Image_Builder:
   before_script:
     - echo Hi
+    - TELEGRAM_TOKEN=CI_CD
   stage: build
   image:
     name: gcr.io/kaniko-project/executor:debug
