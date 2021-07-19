@@ -43,7 +43,7 @@ Code_Runner:
   stage: test
   script:
     - source venv/bin/activate
-    - ./startup.sh
+    - ./bot.py
 
 
 

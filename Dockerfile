@@ -13,6 +13,11 @@ RUN apt-get install -y nano htop
 # RUN git clone https://github.com/Kalabint/webm2mp4.git
 # WORKDIR /Kala2X_Bot/webm2mp4
 
+# Get Bot-Code from local Folder
+ADD . /Kala2X_Bot/webm2mp4
+WORKDIR /Kala2X_Bot/webm2mp4
+
+
 # Set up Bot Requirements and copy Config file
 RUN pip3 install --user -r requirements.txt
 # COPY config.json ./
@@ -20,11 +25,9 @@ RUN pip3 install --user -r requirements.txt
 #Define ENV_Vars
 ENV FFMPEG_THREADS 2
 ENV FFMPEG_TIMELIMIT 900
-ENV FFMPEG_PRESET veryfast
+ENV FFMPEG_PRESET slower
 ENV TMP_PATH /tmp/
 ENV TELEGRAM_TOKEN CHANGE_ME!
 
 # Starting Bot Startup Script
-COPY startup.sh ./
-RUN chmod +x /Kala2X_Bot/webm2mp4/startup.sh
-RUN /Kala2X_Bot/webm2mp4/startup.sh
+RUN /Kala2X_Bot/webm2mp4/bot.py
