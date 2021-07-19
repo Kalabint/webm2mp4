@@ -48,6 +48,8 @@ Code_Runner:
     - ./bot.py
 
 Docker_Image_Builder:
+  before_script:
+    - echo Hi
   stage: build
   image:
     name: gcr.io/kaniko-project/executor:debug
