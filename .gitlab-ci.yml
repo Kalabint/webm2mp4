@@ -49,8 +49,9 @@ Code_Runner:
 
 Docker_Image_Builder:
   stage: build
-  image: registry.seedelmann.ch/seedelmann/kaniko:latest
-  #entrypoint: ["CMD"]
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
   script:
     - mkdir -p /kaniko/.docker
     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > / kaniko/.docker/config.json
