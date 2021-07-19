@@ -10,7 +10,4 @@ text = "Test OK!"
 bot.utils.load_config_vars();
 bot.utils.ci_cd(text);
 
-
-
-
 print ("Test Finnished!");
