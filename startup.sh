@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo Starting Testing...
-python3 test.py
+python3 bot.py
