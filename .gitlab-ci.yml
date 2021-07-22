@@ -50,8 +50,6 @@ Code_Runner:
 Docker_Image_Builder:
   #only: 
   #  - pushes
-  before_script:
-    - echo Hi, resetting bevore_script lines.
   stage: build
   image:
     name: gcr.io/kaniko-project/executor:debug
