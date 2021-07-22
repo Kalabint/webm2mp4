@@ -76,6 +76,7 @@ deploy-prod:
     - chmod 700 ~/.ssh
   script:
     - echo $TELEGRAM_TOKEN2
+    - export TELEGRAM_TOKEN2
     # Connecting to the server using SSH and changing dir
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/kalabint/docker/services/telegram/kala2xBot"
     # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
