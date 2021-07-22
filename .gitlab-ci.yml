@@ -48,8 +48,8 @@ Code_Runner:
     - ./bot.py
 
 Docker_Image_Builder:
-  only: 
-    - pushes
+  #only: 
+  #  - pushes
   before_script:
     - echo Hi, resetting bevore_script lines.
   stage: build
@@ -65,8 +65,8 @@ Docker_Image_Builder:
 
 
 deploy-prod:
-  only:
-    - pushes
+#  only:
+#    - pushes
   stage: deploy
   before_script:
   # Adding environment's variable SSH_PRIVATE_KEY to the SSH client's agent that manages the private keys
