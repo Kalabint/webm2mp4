@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json
 import os
 import random
@@ -69,3 +71,10 @@ def random_string(length=12):
 
 def ci_cd(text):
     print(str(text))
+
+
+
+config = load_config_vars()
+filename = "config.json"
+#load_config_vars()
+load_config(filename)
