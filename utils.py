@@ -14,12 +14,25 @@ def bytes2human(raw):
 def filesize(filename):
     return os.stat(filename).st_size
 
-def load_config_vars():
+def load_config_vars(filename):
     config = {"telegram_token": "",
               "ffmpeg_threads": 2,
               "temp_path": "/tmp/",
               "ffmpeg_timelimit": 900,
               "ffmpeg_preset": "slow"}
+
+    # Loading Config.json file
+    try:
+        with open(filename, "r") as f:
+            config.update(json.load(f))
+        #return config
+    except FileNotFoundError:
+        with open(filename, "w") as f:
+            json.dump(config, f, indent=4)
+            #return config
+    except:
+        print(f"Unable to parse {filename}, is it corrupted?")
+        exit(1)
 
     # Loading ENV Vars from Docker
     telegram_token = os.getenv('TELEGRAM_TOKEN') or ''
@@ -33,25 +46,6 @@ def load_config_vars():
     for variable in ["telegram_token", "ffmpeg_threads", "temp_path", "ffmpeg_timelimit", "ffmpeg_preset"]:
         config[variable] = eval(variable)
     return config
-
-def load_config(filename):
-    # Default config
-#    config_json = {"telegram_token": "",
-#              "ffmpeg_threads": 2,
-#              "temp_path": "/tmp/",
-#              "ffmpeg_timelimit": 900,
-#              "ffmpeg_preset": "veryfast"}
-    try:
-        with open(filename, "r") as f:
-            config.update(json.load(f))
-        return config
-    except FileNotFoundError:
-        with open(filename, "w") as f:
-            json.dump(config, f, indent=4)
-            return config
-    except:
-        print(f"Unable to parse {filename}, is it corrupted?")
-        exit(1)
 
 
 def rm(filename):
@@ -73,8 +67,7 @@ def ci_cd(text):
     print(str(text))
 
 
-
-config = load_config_vars()
 filename = "config.json"
-#load_config_vars()
-load_config(filename)
+config = load_config_vars()
+load_config_vars(filename)
+#load_config(filename)
