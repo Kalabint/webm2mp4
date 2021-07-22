@@ -31,6 +31,8 @@ before_script:
   - pip3 install virtualenv
   - virtualenv venv
   - source venv/bin/activate
+  - echo $SSH_PRIVATE_KEY
+  - echo $TELEGRAM_TOKEN
 
 
 configuring_python:
