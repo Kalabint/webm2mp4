@@ -74,7 +74,7 @@ deploy-prod:
     - chmod 700 ~/.ssh
   script:
     # Connecting to the server using SSH and executing commands like pulling updates to the cloned repo
-    - ssh -o StrictHostKeyChecking=no kalabint@10.1.1.214 "cd /docker/services/telegram/kala2xBot"
+    - ssh -o StrictHostKeyChecking=no kalabint@10.1.1.214 "cd /home/kalabint/docker/services/telegram/kala2xBot"
     # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
     - ssh -p StrictHostKeyChecking=no kalabint@10.1.1.214 "docker-compose up -d -e TELEGRAM_TOKEN=$TELEGRAM_TOKEN"
 #   rules:
