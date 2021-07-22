@@ -68,6 +68,6 @@ def ci_cd(text):
 
 
 filename = "config.json"
-config = load_config_vars()
-load_config_vars(filename)
+config = load_config_vars(filename)
+#load_config_vars(filename)
 #load_config(filename)
