@@ -79,7 +79,7 @@ deploy-prod:
     # Connecting to the server using SSH and changing dir
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/kalabint/docker/services/telegram/kala2xBot"
     # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
-    - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP 'echo TELEGRAM_TOKEN="$TELEGRAM_TOKEN2" >>./.env'
+    - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP 'echo TELEGRAM_TOKEN="$TELEGRAM_TOKEN2" >./.env'
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker pull registry.seedelmann.ch/kalabint/webm2mp4:latest"
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker container rm -f kala2xBot_Docker || true"
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP 'docker run -d --name kala2xBot_Docker registry.seedelmann.ch/kalabint/webm2mp4:latest --env-file ./env'
