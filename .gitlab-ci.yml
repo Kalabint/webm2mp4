@@ -1,6 +1,7 @@
 stages:
-  - prerun_setup
   - test
+  - prerun_setup
+  # - test
   - build
   - deploy
 
