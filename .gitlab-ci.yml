@@ -33,7 +33,7 @@ before_script:
   - source venv/bin/activate
 
 
-configuring_python:
+Setup_Requirements:
   stage: prerun_setup
   script:
     - echo "PreRun Setup"
