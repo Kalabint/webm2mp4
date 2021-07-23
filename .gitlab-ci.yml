@@ -47,6 +47,7 @@ Code_Runner:
   script:
     - source venv/bin/activate
     - ./startup.sh
+    - ls
 
 Docker_Image_Builder:
   before_script:
