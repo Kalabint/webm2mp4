@@ -48,7 +48,7 @@ def load_config_vars(filename):
     return config
 
 
-    print ('Using the following Parameters: FFMPEG TIMELIMIT: ' + str(config["ffmpeg_timelimit"]) + ', FFMPEG Preset: ' str(config["ffmpeg_preset"]) + ', FFMPEG Threads: ' + str(config["ffmpeg_threads"]) + ', Temp Path: ' + str(config["temp_path"]) + ', Telegram Bot Token: ' + str(config["ffmpeg_threads"]) + '.')
+    print ('Using the following Parameters: FFMPEG TIMELIMIT: ' + str(config["ffmpeg_timelimit"]) + ', FFMPEG Preset: ' str(config["ffmpeg_preset"]) + ', FFMPEG Threads: ' + str(config["ffmpeg_threads"]) + ', Temp Path: ' + str(config["temp_path"]) + ', Telegram Bot Token: ' + str(config["telegram_token"]) + '.')
 
 
 def rm(filename):
