@@ -46,7 +46,7 @@ Code_Runner:
   stage: test
   script:
     - source venv/bin/activate
-    - ./bot.py
+    - ./utils.py
 
 Docker_Image_Builder:
   before_script:
