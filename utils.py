@@ -41,11 +41,14 @@ def load_config_vars(filename):
     ffmpeg_timelimit = os.getenv('FFMPEG_TIMELIMIT') or ''
     ffmpeg_preset = os.getenv('FFMPEG_PRESET') or ''
 
-    print('Using the following Parameters: FFMPEG Timelimit: ' + str(ffmpeg_timelimit) + ', FFMPEG Preset: ' + str(ffmpeg_preset) + ', FFMPEG Threads: ' + str(ffmpeg_threads) + ', Temp Path: ' + str(temp_path) + ', Telegram Bot Token: ' + str(telegram_token) + '.')
+    print('ENV Parameters: FFMPEG Timelimit: ' + str(ffmpeg_timelimit) + ', FFMPEG Preset: ' + str(ffmpeg_preset) + ', FFMPEG Threads: ' + str(ffmpeg_threads) + ', Temp Path: ' + str(temp_path) + ', Telegram Bot Token: ' + str(telegram_token) + '.')
 
     for variable in ["telegram_token", "ffmpeg_threads", "temp_path", "ffmpeg_timelimit", "ffmpeg_preset"]:
         config[variable] = eval(variable)
     return config
+
+
+    print ('Using the following Parameters: FFMPEG TIMELIMIT: ' + str(config["ffmpeg_timelimit"]) + ', FFMPEG Preset: ' str(config["ffmpeg_preset"]) + ', FFMPEG Threads: ' + str(config["ffmpeg_threads"]) + ', Temp Path: ' + str(config["temp_path"]) + ', Telegram Bot Token: ' + str(config["ffmpeg_threads"]) + '.')
 
 
 def rm(filename):
