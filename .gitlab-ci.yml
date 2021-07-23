@@ -46,6 +46,7 @@ Code_Runner:
   stage: test
   script:
     - source venv/bin/activate
+    - ls
     - ./startup.sh
     - ls
     - cat config.json
